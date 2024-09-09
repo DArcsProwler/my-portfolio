@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my portfolio website showcasing my projects and skills.">
+    <meta name="keywords" content="portfolio, web design, coding">
+    <meta name="author" content="June">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-title">
+            <h1>My Portfolio</h1>
+        </div>
+        <nav>
+            <ul>
+            <button onclick="showContent('about')">About Me</button>
+            <button onclick="showContent('projects')">Projects</button>
+            <button onclick="showContent('contact')">Contact</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>Hello! My name is Juana Bustamante, I am currently in the final year of my Bachelor's Degree in Bilingualism with an Emphasis in English. Over the past two years, I have gained valuable experience in translation work and personalized English teaching, which has deepened my expertise in language and education. Alongside my academic pursuits, I am actively involved in a research project examining the use of ICT in public education settings and its impact on pedagogical practices.
+
+                        In addition to my work in education and research, I am also pursuing studies in coding and programming. I am currently focused on Python, exploring its applications in data analysis and development, while also expressing a keen interest in expanding my skills to include JavaScript. My dual commitment to research and programming enables me to approach educational challenges with innovative solutions and a technical perspective.</p>
+                </div>
+                <div class="cv">
+                    <h3>Curriculum Vitae</h3>
+                    <ul>
+                        <li><strong>Education:</strong> Bachelor’s Degree in Bilingualism with an Emphasis in English</li>
+                        <li><strong>IT & ICT Proficiency:</strong> MS Office, G Suit, LMS for E-Learning, Research & Data Gathering (Advanced), HTML, CSS, Python, JavaScript (beginner)</li>
+                        <li><strong>Technical Abilities:</strong> Lesson Planning, Instructional Design, Curriculum Design, </a></li>
+                        <li><strong>Experience:</strong> My background includes teaching in public primary and high schools during my practicum, along with providing private tutoring. I have also worked as a copywriter and engaged in academic and marketing research, which has allowed me to develop a diverse skill set across various disciplines.</li>
+                        <li><strong>Download CV:</strong> <a href="CV_DOC.pdf" download>Download my CV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>        
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Personal Portfolio Website</h3>
+                <p>Currently developing this portfolio website using HTML, CSS, and incorporating accessibility elements like the OpenDyslexic font to enhance user experience.</p>
+            </div>
+            <div class="project-item">
+                <h3>Python Exercises</h3>
+                <p>Engaged in various Python exercises, including creating a basic calculator, working with input/output operations, and tackling range-based problems.</p>
+            </div>
+            <div class="project-item">
+                <h3>Future Projects</h3>
+                <p>I plan to develop an interactive Python game to practice vocabulary in English and further explore web development with JavaScript and database integration.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to email me at: <a href="mailto:junev.bust@gmail.com">junev.bust@gmail.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 June. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('main section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

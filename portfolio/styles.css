@@ -1,0 +1,283 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-green: #8e8e00;
+    --color-purple: #6a0d91;
+    --color-gray: #333333;
+}
+
+/* Font Face Definitions */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('fonts/OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/OpenDyslexic-Bold.woff2') format('woff2'),
+         url('fonts/OpenDyslexic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/OpenDyslexic-Italic.woff2') format('woff2'),
+         url('fonts/OpenDyslexic-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Body Styling */
+body {
+    font-family: 'OpenDyslexic', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background: repeating-linear-gradient(
+        90deg,
+        var(--color-black),
+        var(--color-black) 20px,
+        var(--color-white) 20px,
+        var(--color-white) 40px
+    );
+    padding: 20px;
+    text-align: center;
+}
+
+.header-title h1 {
+    color: var(--color-green);
+    text-shadow: 2px 2px 0 var(--color-black);
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--color-black);
+    border-radius: 5px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li button {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'OpenDyslexic', sans-serif;
+}
+
+nav ul li button:hover {
+    background-color: var(--color-green);
+    color: var(--color-black);
+}
+
+
+/* Main Content Section */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Section Styling */
+.section {
+    display: none; /* Hide all by default */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-gray);
+    border-radius: 8px;
+}
+
+.section.active {
+    display: block; /* Display the active section */
+}
+
+/* Headings */
+h2 {
+    font-family: 'OpenDyslexic', sans-serif;
+    font-weight: bold;
+    color: var(--color-white);
+    border-bottom: 2px solid var(--color-purple);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    border-radius: 8px;
+}
+
+/* Paragraphs */
+p {
+    font-family: 'OpenDyslexic', sans-serif;
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* About Section Styling */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px; /* Increased space between elements */
+    padding: 20px; /* Reduced padding to prevent downward stretching */
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: 40px auto; /* Consistent margin */
+}
+
+/* Responsive design for larger screens */
+@media screen and (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        gap: 50px; /* Increased gap between columns */
+        padding: 30px; /* Adjusted padding for better layout */
+    }
+}
+
+.bio {
+    margin-bottom: 20px; /* Reduced margin for better balance */
+    text-align: left; /* Align to the left for readability */
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.cv ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; /* Reduced gap for compact look */
+}
+
+@media screen and (min-width: 768px) {
+    .cv ul {
+        grid-template-columns: 1fr 1fr; /* Two-column layout for larger screens */
+        gap: 25px; /* More space between columns */
+    }
+}
+
+.cv ul li {
+    margin-bottom: 15px; /* Reduced margin for compactness */
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.cv ul li strong {
+    color: var(--color-green);
+}
+
+.cv a {
+    color: var(--color-purple);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cv a:hover {
+    text-decoration: underline;
+}
+
+/* General Styling */
+body {
+    font-family: 'OpenDyslexic', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    text-align: center; /* Centered headings */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--color-gray);
+    padding: 20px;
+    text-align: center;
+    color: var(--color-white);
+    position: relative; /* Prevents it from pushing content down */
+}
+
+/* Contact Section */
+#contact a {
+    color: var(--color-green); /* Green color for email links */
+    text-decoration: none; /* Removes underline */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Adds underline on hover for better visibility */
+}
+
+/* Project Titles */
+.project-item h3 {
+    color: var(--color-green); /* Green color for project titles */
+    font-family: 'OpenDyslexic', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    font-family: 'OpenDyslexic', sans-serif;
+    font-weight: bold;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: 2px solid var(--color-green);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: var(--color-green);
+    color: var(--color-black);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Normal Text Class */
+.normal-text {
+    font-family: 'OpenDyslexic', sans-serif;
+    font-weight: normal; /* Uses the Regular font */
+}
